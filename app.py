@@ -13,6 +13,10 @@ MODELO = tf.keras.models.load_model('modelo_ia.h5')
 SCALER_X = joblib.load('scaler_x.pkl')
 SCALER_Y = joblib.load('scaler_y.pkl')
 
+@app.route('/', methods=['GET'])
+def home():
+    return "Servidor da IA de Crédito: ON e Operacional!", 200
+
 @app.route('/webhook', methods=['POST'])
 def webhook():
     req = request.get_json(silent=True, force=True)
