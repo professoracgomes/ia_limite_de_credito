@@ -1,6 +1,2 @@
 flask
-tensorflow-cpu==2.16.1
-pandas
-scikit-learn
-joblib
 gunicorn
